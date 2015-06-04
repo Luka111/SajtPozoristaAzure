@@ -7,6 +7,10 @@ class Vesti_m extends CI_Model {
     }
 
     public function insert($creatorUsername, $fileName) {
+        if (!$creatorUsername || !$this->input->post('naslov') || !$this->input->post('sadrzaj')
+        ) {
+            return FALSE;
+        }
         $data = array(
             'Naslov' => $this->input->post('naslov'),
             'Sadrzaj' => $this->input->post('sadrzaj'),
@@ -17,6 +21,9 @@ class Vesti_m extends CI_Model {
     }
 
     public function findOne($id) {
+        if (!$id) {
+            return FALSE;
+        }
         $query = $this->db->get_where('vest', array('VestID' => $id));
         return $query->row_array();
     }
@@ -28,10 +35,17 @@ class Vesti_m extends CI_Model {
     }
 
     public function removeOne($id) {
+        if (!$id) {
+            return FALSE;
+        }
         $this->db->delete('vest', array('VestId' => $id));
     }
 
     public function update($fileName) {
+        if (!$this->input->post('naslov') || !$this->input->post('sadrzaj')
+        ) {
+            return FALSE;
+        }
         $data = array(
             'Naslov' => $this->input->post('naslov'),
             'Sadrzaj' => $this->input->post('sadrzaj')

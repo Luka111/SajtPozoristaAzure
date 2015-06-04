@@ -7,6 +7,16 @@ class User extends CI_Model {
     }
 
     public function insert() {
+        if (!$this->input->post('username')
+                || !$this->input->post('password')
+                || !$this->input->post('telefon')
+                || !$this->input->post('email')
+                || !$this->input->post('role')
+                || !$this->input->post('posta')
+                || !$this->input->post('birthyear')
+        ) {
+            return FALSE;
+        }
         $zeliPostu = $this->input->post('posta') == 'on' ? 1 : 0;
         $starost = date("Y") - $this->input->post('birthyear');
         $data = array(
@@ -28,12 +38,18 @@ class User extends CI_Model {
     }
 
     public function findOne() {
+        if (!$this->input->post('username')) {
+            return FALSE;
+        }
         $username = $this->input->post('username');
         $query = $this->db->get_where('korisnik', array('Username' => $username));
         return $query->row_array();
     }
 
     public function removeOne($username) {
+        if (!$username) {
+            return FALSE;
+        }
         $this->db->delete('korisnik', array('Username' => $username));
     }
 
@@ -44,6 +60,9 @@ class User extends CI_Model {
     }
 
     public function makeSession($userData) {
+        if (!$userData) {
+            return FALSE;
+        }
         $this->session->set_userdata($userData);
     }
 

@@ -18,19 +18,19 @@
             <?php echo form_open_multipart('pozorista/izmeniPozoriste/', '', array('PozID' => $pozoriste['PozID'])) ?>
             <div class="form-group">
                 <label for="naziv">Naziv<font color="red"> * </font></label>
-                <input type="text" class="form-control" name="naziv" id="naziv" value="<?php echo $pozoriste['Naziv']; ?>" maxlength="30">
+                <input type="text" class="form-control" name="naziv" id="naziv" value="<?php echo htmlspecialchars($pozoriste['Naziv']); ?>" maxlength="30">
             </div>
              <div class="form-group">
                 <label for="adresa">Adresa <font color="red"> * </font></label>
-                <input type="text" id="adresa" name="adresa" value="<?php echo $pozoriste['Adresa']; ?>" class="form-control" maxlength="40">
+                <input type="text" id="adresa" name="adresa" value="<?php echo htmlspecialchars($pozoriste['Adresa']); ?>" class="form-control" maxlength="40">
             </div>
             <div class="form-group">
                 <label for="telefon">Telefon <font color="red"> * </font></label>
-                <input type="text" id="telefon" name="telefon" value="<?php echo $pozoriste['Telefon']; ?>" class="form-control" pattern="\d*" maxlength="15">
+                <input type="text" id="telefon" name="telefon" value="<?php echo htmlspecialchars($pozoriste['Telefon']); ?>" class="form-control" pattern="\d*" maxlength="15">
             </div>
             <div class="form-group">
                 <label for="email">Email <font color="red"> * </font></label>
-                <input type="email" id="email" name="email" value="<?php echo $pozoriste['Email']; ?>" class="form-control" pattern="[^ @]+@[^ @]+.[a-z]+">
+                <input type="email" id="email" name="email" value="<?php echo htmlspecialchars($pozoriste['Email']); ?>" class="form-control" pattern="[^ @]+@[^ @]+.[a-z]+">
             </div>
             <div class="form-group">
                 <label for="Opis">Opis <font color="red"> * </font></label>

@@ -24,7 +24,7 @@
             <?php echo form_open_multipart('vesti/izmeniVest/', '', array('VestID' => $vest['VestID'])) ?>
             <div class="form-group">
                 <label for="naslov">Naslov <font color="red"> * </font></label>
-                <input type="text" id="naslov" name="naslov" value="<?php echo $vest['Naslov']; ?>" class="form-control" maxlength="20">
+                <input type="text" id="naslov" name="naslov" value="<?php echo htmlspecialchars($vest['Naslov']); ?>" class="form-control" maxlength="20">
             </div>
             <div class="form-group">
                 <label for="sadrzaj">Sadrzaj <font color="red"> * </font></label>

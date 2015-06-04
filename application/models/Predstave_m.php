@@ -7,7 +7,9 @@ class Predstave_m extends CI_Model {
     }
 
     public function insert($creatorUsername, $fileName) {
-        if (!$creatorUsername || !$this->input->post('pozID') || !$this->input->post('naziv')
+        if (!$creatorUsername 
+                || !$this->input->post('pozID') 
+                || !$this->input->post('naziv')
         ) {
             return FALSE;
         }
@@ -90,6 +92,11 @@ class Predstave_m extends CI_Model {
     }
 
     public function update($fileName) {
+        if (!$this->input->post('pozID') 
+                || !$this->input->post('naziv')
+        ) {
+            return FALSE;
+        }
         $data = array(
             'Naziv' => $this->input->post('naziv'),
             'Glumci' => $this->input->post('glumci'),

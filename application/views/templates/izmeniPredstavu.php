@@ -18,7 +18,7 @@
             <?php echo form_open_multipart('predstave/izmeniPredstavu/', '', array('PredID' => $predstava['PredID'])) ?>
             <div class="form-group">
                 <label for="naziv">Naziv<font color="red"> * </font></label>
-                <input type="text" class="form-control" name="naziv" id="naziv" value="<?php echo $predstava['Naziv']; ?>" maxlength="20">
+                <input type="text" class="form-control" name="naziv" id="naziv" value="<?php echo htmlspecialchars($predstava['Naziv']); ?>" maxlength="20">
             </div>
             <div class="form-group">
                 <label for="pozID">Pozorište<font color="red"> * </font></label>
@@ -39,7 +39,7 @@
             </div>
             <div class="form-group">
                 <label for="reziser">Režiser</label>
-                <input type="text" class="form-control" id="reziser" name="reziser" value="<?php echo $predstava['Reziser']; ?>" maxlength="30">
+                <input type="text" class="form-control" id="reziser" name="reziser" value="<?php echo htmlspecialchars($predstava['Reziser']); ?>" maxlength="30">
             </div>
             <div class="row">
                 <div class="col-md-6 portfolio-item">

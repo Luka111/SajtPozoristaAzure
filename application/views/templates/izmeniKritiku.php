@@ -15,7 +15,7 @@
             <?php echo form_open('predstave/izmeniKritikuSubmit/', '', array('KritID' => $kritika['KritID'], 'PredID' => $kritika['PredID'], 'CreatorUsername' => $kritika['Username'])) ?>
             <div class="form-group">
                 <label for="naslov">Naslov<font color="red"> * </font></label>
-                <input type="text" class="form-control" name="naslov" id="naslov" value="<?php echo $kritika['Naslov']; ?>" maxlength="30">
+                <input type="text" class="form-control" name="naslov" id="naslov" value="<?php echo htmlspecialchars($kritika['Naslov']); ?>" maxlength="30">
             </div>
             <div class="form-group">
                 <label for="sadrzaj">Sadrzaj<font color="red"> * </font></label>
