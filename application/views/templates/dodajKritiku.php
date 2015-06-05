@@ -3,7 +3,7 @@
         <div class="row">
 
             <div class="col-lg-12">
-                <h1 class="page-header">Dodavanje kritike za predstavu <?php echo $predstava['Naziv'] ?></h1>
+                <h1 class="page-header"><span class="glyphicon-pencil"></span> Dodavanje kritike za predstavu <?php echo $predstava['Naziv'] ?></h1>
             </div>
 
         </div>

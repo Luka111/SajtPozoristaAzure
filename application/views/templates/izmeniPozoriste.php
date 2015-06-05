@@ -4,7 +4,7 @@
         <div class="row">
 
             <div class="col-lg-12">
-                <h1 class="page-header">Izmeni pozoriste</h1>
+                <h1 class="page-header"><span class="glyphicon-pencil"></span> Izmeni pozoriste</h1>
             </div>
 
         </div>

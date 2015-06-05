@@ -4,7 +4,7 @@
         <div class="row">
 
             <div class="col-lg-12">
-                <h1 class="page-header">Pozorista</h1>
+                <h1 class="page-header"><span class="glyphicon-cloud"></span> Pozorista</h1>
             </div>
 
         </div>

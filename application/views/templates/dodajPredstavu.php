@@ -4,7 +4,7 @@
         <div class="row">
 
             <div class="col-lg-12">
-                <h1 class="page-header">Dodaj predstavu za pozoriste - <?php echo $NazivPozorista ?></h1>
+                <h1 class="page-header"><span class="glyphicon-pencil"></span> Dodaj predstavu za pozoriste - <?php echo $NazivPozorista ?></h1>
             </div>
 
         </div>

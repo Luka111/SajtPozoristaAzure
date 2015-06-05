@@ -18,7 +18,7 @@
             echo '<div class="fill" style="background-image:url(' . display_image('predstave', $predstave[$i]['Slika'], '1900x1080.gif') . ');"></div>';
             echo '</a>';
             echo '<div class="carousel-caption">';
-            echo '<h1>';
+            echo '<h1 style="z-index:16;">';
             echo $predstave[$i]['Naziv'];
             echo '</h1>';
             echo '</div>';
@@ -33,4 +33,33 @@
     <a class="right carousel-control" href="#myCarousel" data-slide="next">
         <span class="icon-next"></span>
     </a>
+</div>
+<div class="container">
+    <div class="col-md-7">
+        <br/><br/><br/>
+        <h3>
+            Činjenica je da su sve veće predstave rasprodate najmanje mesec dana pre
+            njihovog izvođenja što pokazuje da kultura i nije toliko zapostavljena i da bi ovaj servis
+            mogao biti više od školskog projekta.
+        </h3>
+    </div>
+    <div class="col-md-5">
+        <br/>
+        <img class="img-responsive" src="<?php echo display_image('icons', 'theater-icon.png', '750x450.gif') ?>">
+            
+    </div>
+    <div class="col-md-4">
+        <br/>
+        <img class="img-responsive" src="<?php echo display_image('icons', 'comments-icon.png', '750x450.gif') ?>">
+    </div>
+    <div class="col-md-offset-1 col-md-7">
+        <br/>
+        <h3>
+            Gosti ovog servisa imaju mogućnost da pregledaju
+            pozorišta, vesti, predstave koje se tamo održavaju kao i komentare vezane za njih. Osim
+            toga registrovani korisnici imaju mogućnost da pregledaju profesionalne kritike u vezi
+            željenjih predstava kao i da odaberu da li žele da primaju email-ove o aktuelnim
+            predstavama.
+        </h3>
+    </div>
 </div>
